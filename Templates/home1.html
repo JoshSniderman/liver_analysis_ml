@@ -1,0 +1,137 @@
+ <DOCTYPE! html>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Liver Disease Predictor</title>
+	<script>
+		function show(shown, hidden) {
+			document.getElementById(shown).style.display='block';
+			document.getElementById(hidden).style.display='none';
+		return false;
+		}
+    </script>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+	
+<body>
+	
+ <div id="HomePage">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+		<li class="nav item active">
+		<a class="nav-link" href='#' onclick="return show('Predictor', 'HomePage');">
+		Predictor</a></li>
+      </ul>
+    </div>
+	</nav>
+
+	<h1><strong>Visuals Will Go Here</strong></h1>
+<div class='tableauPlaceholder' id='viz1623973780412'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LiverViz&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='LiverViz&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LiverViz&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1623973780412');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
+</div>
+	
+	<div id="Predictor" style="display:none">
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" onclick="return show('HomePage', 'Predictor');">Home</a>
+        </li>
+
+		<li class="nav item active"><a class="nav-link" href='#'>Predictor</a></li>
+      </ul>
+    </div>
+	</nav>
+
+ 
+ <h1 class="header-text1"> <strong>Predict Liver Disease</strong> </h1>
+	
+			<h3>Enter patient's details:</h3>
+			<form  method="POST">
+			
+			 
+				{# This hidden_tag is a CSRF security feature. #}
+				{{ form.hidden_tag() }}
+				<div class="col-md-6">
+				{{form.gender.label}} <br> {{form.gender}}
+				<br>
+				<br>
+				{{form.vomit.label}} <br> {{form.vomit}}
+				<br>
+				<br>
+				{{form.diarrhea.label}} <br> {{form.diarrhea}}
+				<br>
+				<br>
+				{{form.jaundice.label}} <br> {{form.jaundice}}
+				<br>
+				<br>
+				{{form.fever.label}} <br> {{form.fever}}
+				<br>
+				<br>
+				{{form.headache.label}} <br> {{form.headache}}
+				<br>
+				<br>
+				{{form.fatigue.label}} <br> {{form.fatigue}}
+				<br>
+				<br>
+				{{form.epigastric.label}} <br>{{form.epigastric}}
+				<br>
+				</div>
+				<div class="col-md-6">
+				<br>
+				{{form.age.label}} <br> {{form.age}}
+				<br>
+				<br>
+				{{form.wbc.label}} <br> {{form.wbc}}
+				<br>
+				<br>
+				{{form.hgb.label}} <br> {{form.hgb}}
+				<br>
+				<br>
+				{{form.ast.label}} <br> {{form.ast}}
+				<br>
+				<!-- <br> -->
+				<!-- {{form.rna.label}} <br> {{form.rna}} -->
+				<!-- <br> -->
+				<br>
+				{{form.bmi.label}} <br> {{form.bmi}}
+				<br>
+				<br>
+				{{form.rbc.label}} <br> {{form.rbc}}
+				<br>
+				<br>
+				{{form.plat.label}} <br> {{form.plat}}
+				<br>
+				<br>
+				{{form.alt.label}} <br> {{form.alt}}
+				<br>
+				<br>
+				<br>
+				</div>
+				{{ form.submit() }}
+		
+		</form>
+		</div>
+
+	</body>
+
+</html>

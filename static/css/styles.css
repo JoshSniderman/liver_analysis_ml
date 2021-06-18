@@ -1,0 +1,84 @@
+body{background-color:black}
+
+h1 {
+	font-size: 40px;
+	color: turquoise;
+	text-align: center;
+}
+
+h2 {
+	font-size: 32px;
+	color: red;
+	text-align: center;
+}
+	
+h3 {
+	font-size: 26px;
+	color: turquoise;
+	text-align: center;
+	}
+	
+	p {
+		font-size: 16px;
+		color: black
+	}
+
+a {
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+form {
+	font-size: 14px;
+	color: turquoise;
+	text-align: center;
+}
+
+li {
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+.box {
+  /* height: 400px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #fff;
+  background: white;
+}
+
+.row {
+	  margin-left: 50px;
+	  margin-right: 50px;
+}
+
+image {
+	margin: auto;
+}
+
+.dropdown {
+  float: left;
+  /* overflow: auto; */
+}
+
+.table {
+	overflow: auto;
+}
+
+.tableauPlaceholder {
+	margin: auto;
+	text-align: center;
+}
+
+@media (max-width=600px) {
+	.navbar{
+		color: blue;
+	}
+	
+	body {
+		background: black;
+	}
+}

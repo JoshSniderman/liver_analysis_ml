@@ -1,0 +1,90 @@
+ <DOCTYPE! html>
+
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8"/>
+	<title>Liver Disease Predictor</title>
+	<script>
+		function show(shown, hidden) {
+			document.getElementById(shown).style.display='block';
+			document.getElementById(hidden).style.display='none';
+		return false;
+		}
+    </script>
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+	
+<body>
+	
+<div id="Predictor">
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" onclick="return show('HomePage', 'Predictor');">Home</a>
+        </li>
+
+		<li class="nav item active"><a class="nav-link" href='#'>Predictor</a></li>
+      </ul>
+    </div>
+	</nav>
+	<h1></h1>
+
+					<h3>Thank You. Here is entered patient's details:</h3>
+					<ul>
+						<li>Gender: {{session['gender']}}</li>
+						<li>Fever:  {{session['fever']}}</li>
+						<li>Vomit: {{session['vomit']}}</li>
+						<li>Headache:  {{session['headache']}}</li>
+						<li>Diarrhea:  {{session['diarrhea']}}</li>
+						<li>Fatigue:  {{session['fatigue']}}</li>
+						<li>Jaundice:  {{session['jaundice']}}</li>
+						<li>Epigastric Pain:  {{session['epigastric']}}</li>
+						<li>Age:  {{session['age']}}</li>
+						<li>BMI:  {{session['bmi']}}</li>
+						<li>WBC:  {{session['wbc']}}</li>
+						<li>RBC:  {{session['rbc']}}</li>
+						<li>Plat:  {{session['plat']}}</li>
+						<li>AST:  {{session['ast']}}</li>
+						<li>ALt:  {{session['alt']}}</li>
+						<li>RNA:  {{session['rna']}}</li>
+					</ul>
+					<h3>Predicted Liver Disease is: </h3>
+					<h2>{{results}}</h2>
+
+</div>
+
+<div id="HomePage" style="display:none">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+		<li class="nav item active">
+		<a class="nav-link" href='#' onclick="return show('Predictor', 'HomePage');">
+		Predictor</a></li>
+      </ul>
+    </div>
+	</nav>
+	<h1>Visuals Will Go Here</h1>
+<div class='tableauPlaceholder' id='viz1623973780412' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LiverViz&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='LiverViz&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Li&#47;LiverViz&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1623973780412');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	</div>
+	
+</body>
+
+</html>
