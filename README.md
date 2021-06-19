@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Liver cirrhosis affects nearly 80 million to 100 million Americans but remains widely misdiagnosed. There are many contributing factors to why, one of the main factors being that it can occur in even the healthiest of individuals. With symptoms that are similar to other illnesses it becomes that much difficult to properly diagnose. The medical community has started making progress in terms of diagnoses but the issue of misdiagnosis still remains. With the disease being so widespread, the number of healthy livers decreases which affects organ donation as well. Our team decided to tackle that problem by creating a tool for doctors to possibly catch liver cirrhosis early on before sending patients through extensive tests and treatments.
+Liver disease affects nearly 80 million to 100 million Americans but remains widely misdiagnosed. There are many contributing factors to why, one of the main factors being that it can occur in even the healthiest of individuals. With symptoms that are similar to other illnesses it becomes that much difficult to properly diagnose. The medical community has started making progress in terms of diagnoses but the issue of misdiagnosis still remains. With the disease being so widespread, the number of healthy livers decreases which affects organ donation as well. Our team decided to tackle that problem by creating a tool for doctors to possibly catch liver cirrhosis early on before sending patients through extensive tests and treatments.
 
 ## About Data:
 
