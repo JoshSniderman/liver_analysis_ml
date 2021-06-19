@@ -24,18 +24,24 @@ Stage 4 – Cirrhosis
 
 The dataset was used to build a Deep Learning model. After identifying key attributes from a patient test results the model should be able to predict which type of liver disease the patient has.
 
-
-
 ## Problem Statement:
 Build a deep learning model to predict the type of a liver disease based on the patient’s attributes like Age, BMI, WBC, RBC etc.
+
+![WBC_vs_RBC](images/WBC_vs_RBC.png)
+
+![ALT_vs_AST](images/ALT_vs_AST.png)
+
+![Plat_vs_HGB](images/Plat_vs_HGB.png)
 
 ## Train Deep Learning Model:
 Train deep learning models based on different nodes configuration using library Keras Tensforflow. Model building would have following:
 Exploratory Data Analysis using visualizations in pandas, matplotlb and seaborn
 
-![bar_chart](images/bar_chart.png)
-![bar_chart](images/bar_chart.png)
-![bar_chart](images/bar_chart.png)
+![Model_1_Losses](images/Model_1_Losses.png)
+
+![Model_2_Losses](images/Model_2_Losses.png)
+
+![Model_3_Losses](images/Model_3_Losses.png)
 
 ## Cleaning the data
 Preprocessing of data using scikit learn library
