@@ -27,9 +27,15 @@ The dataset was used to build a Deep Learning model. After identifying key attri
 ## Problem Statement:
 Build a deep learning model to predict the type of a liver disease based on the patient’s attributes like Age, BMI, WBC, RBC etc.
 
+WBC vs RBC:
+
 ![WBC_vs_RBC](images/WBC_vs_RBC.png)
 
+ALT vs AST:
+
 ![ALT_vs_AST](images/ALT_vs_AST.png)
+
+Plat vs HGB:
 
 ![Plat_vs_HGB](images/Plat_vs_HGB.png)
 
