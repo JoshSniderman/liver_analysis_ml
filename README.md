@@ -6,9 +6,25 @@ Liver cirrhosis affects nearly 80 million to 100 million Americans but remains w
 
 ## About Data:
 
-The dataset contains the different patients records with 4 types of liver disease. The dataset was used to build a Deep Learning model. After identifying key attributes from a patient test results the model should be able to predict which type of liver disease the patient has.
+We based our results on the 4 stages of liver disease:
+
+Stage 1 – Few Septa (Fatty Liver Disease)
+           This is when there is fat accumulation in the liver without inflammation. It can be harmless and usually asymptomatic.
+           
+Stage 2 – Many Septa (NASH Nonalcoholic steatohepatitis)
+           A more aggressive form of liver disease in which the inflammation and scarring starts. This is often referred as a silent killer because it can lead to permanent liver damage and scarring, which could prevent the liver from functioning properly.
+           
+Stage 3 – Portal Fibrosis (NASH with Fibrosis)
+           This stage is when scarring around liver cells are caused by the continuous inflammation. The liver can still function somewhat normally at this point.
+           
+Stage 4 – Cirrhosis
+           The most severe of the stages that causes permanent liver damage. The liver either enlarges or shrinks, scar tissue replaces healthy liver tissue, and the liver stops functioning properly. Cirrhosis can be fatal and can turn into cancer or requires a transplant.
 
 ![bar_chart](images/bar_chart.png)
+
+The dataset was used to build a Deep Learning model. After identifying key attributes from a patient test results the model should be able to predict which type of liver disease the patient has.
+
+
 
 ## Problem Statement:
 Build a deep learning model to predict the type of a liver disease based on the patient’s attributes like Age, BMI, WBC, RBC etc.
@@ -16,6 +32,10 @@ Build a deep learning model to predict the type of a liver disease based on the 
 ## Train Deep Learning Model:
 Train deep learning models based on different nodes configuration using library Keras Tensforflow. Model building would have following:
 Exploratory Data Analysis using visualizations in pandas, matplotlb and seaborn
+
+![bar_chart](images/bar_chart.png)
+![bar_chart](images/bar_chart.png)
+![bar_chart](images/bar_chart.png)
 
 ## Cleaning the data
 Preprocessing of data using scikit learn library
